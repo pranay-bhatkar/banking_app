@@ -1,9 +1,12 @@
 'use client'
 import { Doughnut } from 'react-chartjs-2';
-import {Chart, ArcElement} from 'chart.js'
-Chart.register(ArcElement);
+import {Chart, ArcElement,Tooltip, Legend} from 'chart.js'
+Chart.register(ArcElement, Tooltip, Legend);
 
 
+interface DoughnutChartProps {
+    accounts?: any; // Define the appropriate type for accounts or remove it if not needed
+  }
 
 const DoughnutChart = ({ accounts } : DoughnutChartProps) => {
     const data = {
